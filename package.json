@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.3.3",
+    "@use-gesture/react": "^10.0.3",
     "autoprefixer": "^10.3.4",
     "classnames": "^2.3.1",
     "clsx": "^1.1.1",
@@ -22,15 +23,19 @@
     "postcss": "^8.3.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-icons": "^4.2.0"
+    "react-icons": "^4.2.0",
+    "react-spring": "^9.2.6",
+    "styled-components": "^5.3.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
     "@types/react": "^17.0.20",
+    "@types/styled-components": "^5.1.14",
     "@types/tailwindcss": "^2.2.1",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
     "@typescript-eslint/parser": "^4.31.0",
+    "babel-plugin-styled-components": "^1.13.2",
     "eslint": "^7.32.0",
     "eslint-config-next": "^11.1.2",
     "eslint-config-prettier": "^8.3.0",
@@ -39,6 +44,7 @@
     "next-sitemap": "^1.6.168",
     "prettier": "^2.4.0",
     "standard-version": "^9.3.1",
+    "tailwind-styled-components": "^2.0.3",
     "tailwindcss": "^2.2.15",
     "typescript": "^4.4.3"
   },
@@ -50,5 +56,8 @@
     "src/**/*.{json,css,scss,md}": [
       "prettier -w"
     ]
+  },
+  "resolutions": {
+    "styled-components": "^5"
   }
 }
