@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { useSpring, animated, config } from '@react-spring/web';
 import { useDrag } from '@use-gesture/react';
@@ -119,6 +119,24 @@ export default function Cube() {
       };
     });
   };
+
+  const arrowKeyEventListener = (event: KeyboardEvent) => {
+    if (event.key === 'ArrowLeft') {
+      onLeftButtonClicked();
+    }
+
+    if (event.key === 'ArrowRight') {
+      onRightButtonClicked();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('keydown', arrowKeyEventListener);
+
+    return () => {
+      document.removeEventListener('keydown', arrowKeyEventListener);
+    };
+  }, []);
 
   return (
     <div className='flex flex-col items-center justify-center h-full'>
